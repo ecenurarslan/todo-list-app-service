@@ -1,6 +1,6 @@
 # To-Do List Application Web API
 
-This repository is created for learning and practicing .Net Core skills and .
+This repository is created for learning and practicing .Net Core skills using microservice architecture and MSSQL database.
 It is a Web API performs CRUD operations and user Authentication / Authorization with JWT to perform:
 - List Items
 - Add Items
