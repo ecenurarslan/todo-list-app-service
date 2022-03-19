@@ -58,15 +58,15 @@ namespace todo_app_api.Controllers
         {
             IFormFile formFile = files[0];
             try
-            { // ben hayatimda boyle guzellik ve tatlilik ve kelebeklik ve muha bırak şimdi nasıl yazdırdık
-                string uploads = Path.Combine("uploads"); // bu ne pat he tmmmm 
+            {
+                string uploads = Path.Combine("uploads");
        
                     if (formFile.Length > 0)
                     {
-                        string filePath = Path.Combine(uploads, formFile.FileName + ".png");//   tmm 
+                        string filePath = Path.Combine(uploads, formFile.FileName + ".png"); 
                         using (Stream fileStream = new FileStream(filePath, FileMode.Create))
                         {
-                            await formFile.CopyToAsync(fileStream);// bi dk user geliyo mu deneyelim zaten bundan sonra yapicagin tek sey su.  filepath i database e yazicaksin orasini kendin yaparsin zaten easy sadece database e gondericeksin evet tmm usera bakalm hemen
+                            await formFile.CopyToAsync(fileStream);
                         }
                     }
                 UserDto.Register userData= JsonSerializer.Deserialize<UserDto.Register>(user);
